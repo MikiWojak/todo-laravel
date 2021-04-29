@@ -10,4 +10,6 @@ class Todo extends Model
     // use HasFactory;
 
     protected $fillable = ['title', 'completed'];
+
+    protected $hidden = ['created_at', 'updated_at'];
 }
