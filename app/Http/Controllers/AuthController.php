@@ -10,11 +10,11 @@ class AuthController extends Controller
         $http = new \GuzzleHttp\Client;
 
         try {
-            $response = $http->post('http://localhost/todo-laravel/public/oauth/token', [
+            $response = $http->post(config('services.passport.login_endpoint'), [
                 'form_params' => [
                     'grant_type' => 'password',
-                    'client_id' => 2,
-                    'client_secret' => 'xKpS9dTsy3mmhAQCDH6shO8NewSnXfbReUvxCVi5',
+                    'client_id' => config('services.passport.client_id'),
+                    'client_secret' => config('services.passport.client_secret'),
                     'username' => $request->username,
                     'password' => $request->password,
                 ]
