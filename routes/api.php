@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
+Route::middleware('auth:api')->post('/logout', 'App\Http\Controllers\AuthController@logout');
 
 Route::get('/todos', 'App\Http\Controllers\TodosController@index');
 Route::post('/todos', 'App\Http\Controllers\TodosController@store');
