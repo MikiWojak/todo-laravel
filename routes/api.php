@@ -22,6 +22,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/todos', 'App\Http\Controllers\TodosController@index');
     Route::post('/todos', 'App\Http\Controllers\TodosController@store');
     Route::patch('/todos/{todo}', 'App\Http\Controllers\TodosController@update');
+    Route::delete('/todos/{todo}', 'App\Http\Controllers\TodosController@destroy');
 
     Route::post('/logout', 'App\Http\Controllers\AuthController@logout');
 });
@@ -30,6 +31,3 @@ Route::middleware('auth:api')->group(function() {
 
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
-
-Route::delete('/todos/{todo}', 'App\Http\Controllers\TodosController@destroy');
-
