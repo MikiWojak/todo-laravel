@@ -30,7 +30,11 @@ class TodosController extends Controller
             'completed' => 'required|boolean'
         ]);
 
-        $todo = Todo::create($data);
+        $todo = Todo::create([
+            'user_id' => auth()->user()->id,
+            'title' => $request->title,
+            'completed' => $request->completed
+        ]);
 
         return response($todo, 201);
     }
