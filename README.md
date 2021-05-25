@@ -13,8 +13,30 @@
 
 The project is the Server for the [Vue client](https://github.com/MikiWojak/todo-vue)
 
-## Temporary general setup
+## General setup
 
-Examples of Laravel configuration
-- https://github.com/MikiWojak/todo_rest_api
-- https://github.com/LaravelDaily/Laravel-Vue-Login-Register
+- Clone the repository
+- Copy __.env.example__ file to __.env__
+- Edit the database credentials in the __.env__
+- Open the Terminal and execute the commands
+
+```bash
+# Install libraries, packages, etc.
+composer install
+
+# Generate application key
+php artisan key:generate
+
+# Create tables in the database
+php artisan migrate
+
+# Install Laravel Passport and generate users
+php artisan passport install
+# 'Client ID' and 'Client secret' of the 'Password grant client' will be used further
+# They are also in the database in the table 'oauth_clients'
+```
+
+- Open again the __.env__ file and edit consts:
+    - `PASSPORT_LOGIN_ENDPOINT` - the endpoint in charge of authentication
+    - `PASSPORT_CLIENT_ID` - 'Client ID' of the 'Password grant client'
+    - `PASSPORT_CLIENT_SECRET` - Client secret' of the 'Password grant client'
