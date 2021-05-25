@@ -17,8 +17,8 @@ The project is the Server for the [Vue client](https://github.com/MikiWojak/todo
 
 - Clone the repository
 - Copy __.env.example__ file to __.env__
-- Edit the database credentials in the __.env__
-- Open the Terminal and execute the commands
+- Edit the database credentials in the __.env__ file
+- Open Terminal and execute the commands:
 
 ```bash
 # Install libraries, packages, etc.
@@ -30,10 +30,10 @@ php artisan key:generate
 # Create tables in the database
 php artisan migrate
 
-# Install Laravel Passport and generate users
-php artisan passport install
+# Install Laravel Passport and generate the clients
+php artisan passport:install
 # 'Client ID' and 'Client secret' of the 'Password grant client' will be used further
-# They are also in the database in the table 'oauth_clients'
+# The credentials are also in the database in the table 'oauth_clients'
 ```
 
 - Open again the __.env__ file and edit consts:
