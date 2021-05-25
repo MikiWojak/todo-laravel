@@ -37,6 +37,6 @@ php artisan passport:install
 ```
 
 - Open again the __.env__ file and edit consts:
-    - `PASSPORT_LOGIN_ENDPOINT` - the endpoint in charge of authentication
+    - `PASSPORT_LOGIN_ENDPOINT` - the endpoint in charge of authentication, for instance: "http://todo-laravel.com/oauth/token"
     - `PASSPORT_CLIENT_ID` - 'Client ID' of the 'Password grant client'
     - `PASSPORT_CLIENT_SECRET` - Client secret' of the 'Password grant client'
