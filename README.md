@@ -37,7 +37,7 @@ php artisan passport:install
 
 # For both apache2 and nginx
 # Change credentials for directories: storage and bootstrap/cache and both their subdirectories and files
-suco chmod -R 777 storage bootstrap/cache
+sudo chmod -R 777 storage bootstrap/cache
 ```
 
 - Open again the __.env__ file and edit consts:
