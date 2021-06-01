@@ -34,6 +34,10 @@ php artisan migrate
 php artisan passport:install
 # 'Client ID' and 'Client secret' of the 'Password grant client' will be used further
 # The credentials are also in the database in the table 'oauth_clients'
+
+# For both apache2 and nginx
+# Change credentials for directories: storage and bootstrap/cache and both their subdirectories and files
+suco chmod -R 777 storage bootstrap/cache
 ```
 
 - Open again the __.env__ file and edit consts:
