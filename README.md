@@ -13,12 +13,14 @@
 
 The project is the Server for the [Vue client](https://github.com/MikiWojak/todo-vue)
 
+Based on the tutorial [Vue.js Todo App](https://www.youtube.com/playlist?list=PLEhEHUEU3x5q-xB1On4CsLPts0-rZ9oos)
+
 ## General setup
 
-- Clone the repository
-- Copy __.env.example__ file to __.env__
-- Edit the database credentials in the __.env__ file
-- Open Terminal and execute the commands:
+-   Clone the repository
+-   Copy **.env.example** file to **.env**
+-   Edit the database credentials in the **.env** file
+-   Open Terminal and execute the commands:
 
 ```bash
 # Install libraries, packages, etc.
@@ -40,7 +42,7 @@ php artisan passport:install
 sudo chmod -R 777 storage bootstrap/cache
 ```
 
-- Open again the __.env__ file and edit consts:
-    - `PASSPORT_LOGIN_ENDPOINT` - the endpoint in charge of authentication, for instance: `"http://todo-laravel.com/oauth/token"`
-    - `PASSPORT_CLIENT_ID` - 'Client ID' of the 'Password grant client'
-    - `PASSPORT_CLIENT_SECRET` - Client secret' of the 'Password grant client'
+-   Open again the **.env** file and edit consts:
+    -   `PASSPORT_LOGIN_ENDPOINT` - the endpoint in charge of authentication, for instance: `"http://todo-laravel.com/oauth/token"`
+    -   `PASSPORT_CLIENT_ID` - 'Client ID' of the 'Password grant client'
+    -   `PASSPORT_CLIENT_SECRET` - Client secret' of the 'Password grant client'
