@@ -43,6 +43,6 @@ sudo chmod -R 777 storage bootstrap/cache
 ```
 
 -   Open again the **.env** file and edit consts:
-    -   `PASSPORT_LOGIN_ENDPOINT` - the endpoint in charge of authentication, for instance: `"http://todo-laravel.com/oauth/token"`
+    -   `PASSPORT_LOGIN_ENDPOINT` - the endpoint in charge of authentication, for instance: `"http://todo-laravel.com/oauth/token"` (if you use `php artisan serve` set other port than the API runs and launch another `php artisan serve --port [PORT_OAUTH]`)
     -   `PASSPORT_CLIENT_ID` - 'Client ID' of the 'Password grant client'
     -   `PASSPORT_CLIENT_SECRET` - Client secret' of the 'Password grant client'
